@@ -1,0 +1,30 @@
+package com.mycompany.ejercicio1;
+
+
+public class Persona {
+    String nombre; 
+    String apellidos;
+    String numeroDocumentoIdentidad;
+    int añoNacimiento;
+    String pais;
+    char genero;
+       
+    Persona(String nombre, String apellidos, String numeroDocumentoIdentidad, int añoNacimiento, String pais, char genero) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.numeroDocumentoIdentidad = numeroDocumentoIdentidad;
+        this.añoNacimiento = añoNacimiento;
+        this.pais = pais;
+        this.genero = genero;
+    }
+
+    void imprimir() {
+        System.out.println("Nombre = " + nombre);
+        System.out.println("Apellidos = " + apellidos);
+        System.out.println("Numero de documento de identidad = " + numeroDocumentoIdentidad);
+        System.out.println("Año de nacimiento = " + añoNacimiento);
+        System.out.println("Pais de nacimiento = " + pais);
+        System.out.println("Genero = " + genero);
+        System.out.println();
+    }
+}
