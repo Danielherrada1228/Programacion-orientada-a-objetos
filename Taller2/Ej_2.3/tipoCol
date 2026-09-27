@@ -1,0 +1,3 @@
+package t2.ejercicio3;
+
+public enum tipoCol {BLANCO,NEGRO,ROJO,NARANJA,AMARILLO,VERDE,AZUL,VIOLETA}
