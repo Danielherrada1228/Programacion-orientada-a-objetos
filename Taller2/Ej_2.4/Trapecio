@@ -1,0 +1,26 @@
+package t2.ejercicio4;
+
+public class Trapecio {
+    
+    int baseMayor;
+    int baseMenor;
+    int altura;
+    int L1;
+    int L2;
+    
+    public Trapecio(int baseMayor, int baseMenor, int altura, int L1,int L2){
+        this.baseMayor = baseMayor;
+        this.baseMenor = baseMenor;
+        this.altura = altura;
+        this.L1 = L1;
+        this.L2 = L2;       
+    }
+    
+    double calcularArea(){
+        return ((baseMayor + baseMenor)*altura)/2;                
+    }
+    
+    double calcularPerimetro (){
+        return baseMayor+baseMenor+L1+L2;
+    }
+}
