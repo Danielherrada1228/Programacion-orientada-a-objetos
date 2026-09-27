@@ -1,0 +1,3 @@
+package t2.ejercicio5;
+
+public enum tipo {AHORROS, CORRIENTE}
