@@ -1,0 +1,21 @@
+package t2.ejercicio4;
+
+public class Rombo {
+    int diagonalMayor;
+    int diagonalMenor;
+    int Lado;
+    
+    public Rombo(int diagonalMayor, int diagonalMenor, int Lado){
+        this.diagonalMayor = diagonalMayor;
+        this.diagonalMenor = diagonalMenor;
+        this.Lado = Lado;
+    }
+    
+    double calcularArea(){
+        return (diagonalMayor * diagonalMenor)/2;                
+    }
+    
+    double calcularPerimetro (){
+        return 4*Lado;
+    }
+}
