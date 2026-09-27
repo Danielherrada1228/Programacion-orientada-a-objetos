@@ -1,0 +1,24 @@
+package t2.ejercicio3;
+
+public class T2Ejercicio3 {
+
+    public static void main(String[] args) {
+    Automovil auto1 = new Automovil("Ford", 2018, 3, tipoCom.DIESEL, tipoA.EJECUTIVO, 5, 6, 250, tipoCol.NEGRO, true);
+        auto1.imprimir();
+        auto1.setVelocidadActual(240);
+        System.out.println("Velocidad actual = " + auto1.velocidadActual);
+        auto1.acelerar(20);
+        System.out.println("Velocidad actual = " + auto1.velocidadActual);
+        auto1.desacelerar(50);
+        System.out.println("Velocidad actual = " + auto1.velocidadActual);
+        auto1.frenar();
+        System.out.println("Velocidad actual = " + auto1.velocidadActual);
+        auto1.desacelerar(20);
+        
+        System.out.println("\n--- RESUMEN FINAL DE MULTAS ---");
+        System.out.println("Tiene multas?: " + auto1.tieneMultas());
+        System.out.println("Cantidad de multas: " + auto1.cantidadMultas);
+        System.out.println("Total a pagar por multas: $" + auto1.getTotalMultas());
+    }
+ 
+}
