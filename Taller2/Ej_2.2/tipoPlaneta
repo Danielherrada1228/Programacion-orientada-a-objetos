@@ -1,0 +1,6 @@
+package com.mycompany.t2.ejercicio2;
+
+public enum tipoPlaneta {
+    GASEOSO, TERRESTRE, ENANO;
+    
+}
