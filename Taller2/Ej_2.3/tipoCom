@@ -1,0 +1,3 @@
+package t2.ejercicio3;
+
+public enum tipoCom {GASOLINA,BIOETANOL,DIESEL,BIODIESEL,GAS_NATURAL}
