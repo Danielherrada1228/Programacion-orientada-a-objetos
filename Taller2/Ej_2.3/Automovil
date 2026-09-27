@@ -1,0 +1,161 @@
+package t2.ejercicio3;
+
+public class Automovil {
+    String marca;
+    int modelo;
+    double motor;
+    tipoCom tipoCombustible;
+    tipoA tipoAutomovil;
+    int numeroPuertas;
+    int cantidadAsientos;
+    int velocidadMaxima;
+    tipoCol color;
+    int velocidadActual = 0;
+    boolean esAutomatico;
+    int cantidadMultas;
+    double totalMultas;
+    double valorMulta = 150.0;
+    
+    Automovil(String marca, int modelo,double motor, tipoCom tipoCombustible, tipoA tipoAutomovil, int numeroPuertas, int cantidadAsientos, int velocidadMaxima,tipoCol color, boolean esAutomatico){
+        this.marca = marca;
+        this.modelo = modelo;
+        this.motor = motor;
+        this.tipoCombustible = tipoCombustible;
+        this.tipoAutomovil = tipoAutomovil;
+        this.numeroPuertas = numeroPuertas;
+        this.cantidadAsientos = cantidadAsientos;
+        this.color = color;
+        this.velocidadMaxima = velocidadMaxima;
+        this.esAutomatico = esAutomatico;
+        this.cantidadMultas = 0;
+        this.totalMultas = 0.0;
+        
+    }
+    boolean tieneMultas() {
+        return this.cantidadMultas > 0;
+    }
+    String getMarca(){
+        return marca;
+    }
+    int getModelo(){
+        return modelo;
+    }
+    double getMotor() {
+        return motor;
+    }
+    
+    tipoCom getTipoCombustible() {
+        return tipoCombustible;
+    }
+    tipoA getTipoAutomovil() {
+        return tipoAutomovil;
+    }
+   
+    int getNúmeroPuertas() {
+        return numeroPuertas;
+    }
+
+    int getCantidadAsientos() {
+        return cantidadAsientos;
+    }
+
+    tipoCol getColor() {
+        return color;
+    }
+    
+    int getVelocidadMáxima() {
+        return velocidadMaxima;
+    }
+    int getVelocidadActual() {
+        return velocidadActual;
+    }
+    
+    boolean getesAutomatico (){
+        return esAutomatico;
+    }
+    
+    double getTotalMultas() {
+        return this.totalMultas;
+    }
+    
+    void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    void setModelo(int modelo) {
+        this.modelo = modelo;
+    }
+    void setMotor(int motor) {
+        this.motor = motor;
+    }
+
+    void setTipoCombustible(tipoCom tipoCombustible) {
+        this.tipoCombustible = tipoCombustible;
+    }
+
+    void setTipoAutomovil(tipoA tipoAutomovil) {
+        this.tipoAutomovil = tipoAutomovil;
+    }
+
+    void setNumeroPuertas(int numeroPuertas) {
+        this.numeroPuertas = numeroPuertas;
+    }
+    void setCantidadAsientos(int cantidadAsientos) {
+        this.cantidadAsientos = cantidadAsientos;
+    }
+    void setVelocidadMaxima(int velocidadMáxima) {
+        this.velocidadMaxima = velocidadMáxima;
+    }
+
+    void setColor(tipoCol color) {
+        this.color = color;
+    }
+
+    void setEsAutomatico(boolean esAutomatico) {
+        this.esAutomatico = esAutomatico;
+    }
+
+    void setVelocidadActual(int velocidadActual) {
+        this.velocidadActual = velocidadActual;
+    }
+
+    void acelerar(int incrementoVelocidad) {
+        this.velocidadActual = this.velocidadActual + incrementoVelocidad;
+        if (this.velocidadActual > this.velocidadMaxima) {
+            this.cantidadMultas++;
+            this.totalMultas += this.valorMulta;
+            System.out.println("Alerta! Superaste la velocidad maxima. Se genero una multa.");
+        }
+    }
+    void desacelerar(int decrementoVelocidad) {
+
+        if ((velocidadActual - decrementoVelocidad) > 0) {
+            velocidadActual = velocidadActual - decrementoVelocidad;
+        } else {
+            System.out.println("No se puede decrementar a una velocidad negativa.");
+        }
+    }
+    void frenar() {
+        velocidadActual = 0;
+    }
+
+    double calcularTiempoLlegada(int distancia) {
+        return distancia / velocidadActual;
+    }
+    
+    
+    void imprimir() {
+        System.out.println("Marca = " + marca);
+        System.out.println("Modelo = " + modelo);
+        System.out.println("Motor = " + motor);
+        System.out.println("Tipo de combustible = " + tipoCombustible);
+        System.out.println("Tipo de automovil = " + tipoAutomovil);
+        System.out.println("Numero de puertas = " + numeroPuertas);
+        System.out.println("Cantidad de asientos = " + cantidadAsientos);
+        System.out.println("Velocida maxima = " + velocidadMaxima);
+        System.out.println("Color = " + color);
+        System.out.println("Es automatico = " + esAutomatico);
+        System.out.println("Cantidad de multas = " + cantidadMultas);
+        System.out.println("Total multas = $" + totalMultas);
+    }
+}
