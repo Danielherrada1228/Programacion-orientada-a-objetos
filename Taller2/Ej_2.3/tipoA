@@ -1,0 +1,3 @@
+package t2.ejercicio3;
+
+public enum tipoA {CIUDAD, SUBCOMPACTO,COMPACTO,FAMILIAR,EJECUTIVO,SUV}
