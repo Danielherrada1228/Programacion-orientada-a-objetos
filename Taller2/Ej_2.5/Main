@@ -1,0 +1,13 @@
+package t2.ejercicio5;
+
+public class T2Ejercicio5 {
+
+    public static void main(String[] args) {
+        CuentaBancaria cuenta = new CuentaBancaria("Pedro", "Perez", 123456789, tipo.AHORROS, 9.5);
+        cuenta.imprimir();
+        cuenta.consignar(200000);
+        cuenta.consignar(300000);
+        double nuevoSaldo = cuenta.aplicarInteres();
+        cuenta.retirar(400000);
+    }
+}
